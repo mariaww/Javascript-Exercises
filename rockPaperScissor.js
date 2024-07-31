@@ -1,5 +1,15 @@
 //Javascript - Function - Rock, Paper, or Scissors
 
+/*
+Code will break the game into four parts:
+
+Get the user’s choice.
+Get the computer’s choice.
+Compare the two choices and determine a winner.
+Start the program and display the results.
+
+*/
+
 // Create a function for user choice between rock paper and scissors
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
@@ -27,7 +37,7 @@ const getComputerChoice = () => {
 
 // console.log(getComputerChoice());
 
-// Create a function to determine the winner between userChoice and computerChoice with 3 possible outcome. Win, lose and tie.
+// Create a function to determine the winner between userChoice and computerChoice with 4 possible outcomes. 
 const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
         return 'The game is a tie.';
