@@ -1,0 +1,60 @@
+
+// 1)If else statement
+/* const calculateWeight = ( earthWeight, planet ) => {
+  if (planet==='Mercury'){
+return earthWeight * 0.378
+  } else if (planet==='Venus'){
+    return earthWeight * 0.907
+  }else if (planet==='Mars' ){
+    return earthWeight * 0.377
+  }else if (planet==='Jupiter'){
+    return earthWeight * 2.36
+  }else if (planet==='Saturn'){
+    return earthWeight * 0.916
+  } else {
+    return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.'
+  }
+}; */
+
+// 2) Switch statement 
+/* const calculateWeight = (earthWeight, planet) => {
+  switch (planet) {
+    case 'Mercury':
+      return earthWeight * 0.378;
+    case 'Venus':
+      return earthWeight * 0.907;
+    case 'Mars':
+      return earthWeight * 0.377;
+    case 'Jupiter':
+      return earthWeight * 2.36;
+    case 'Saturn':
+      return earthWeight * 0.916;
+    default:
+      return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+  }
+}; */
+
+// 3) Object, bracket notation, tenary operator
+// This object directly maps each planet name to its corresponding multiplier.
+
+  const planetMultipliers = {
+    Mercury: 0.378,
+    Venus: 0.907,
+    Mars: 0.377,
+    Jupiter: 2.36,
+    Saturn: 0.916
+  };
+
+// planetMultipliers[x] accesses the value corresponding to the key held in x. If x is 'Mars', it retrieves the value 0.377. 
+
+const calculateWeight = (earthWeight, planet) => {
+  const multiplier = planetMultipliers[planet];
+
+  // The function checks if the multiplier exists (i.e., the planet name is valid). If it does, it returns the calculated weight
+
+  return multiplier ? Math.floor(earthWeight * multiplier) : 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+};
+
+console.log(calculateWeight(100, 'Mars'));  // Outputs: 37
+console.log(calculateWeight(150, 'Jupiter')); // Outputs: 354
+console.log(calculateWeight(100, 'Saturn'))  // Outputs: 91
