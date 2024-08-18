@@ -17,7 +17,7 @@ Learn Basic JavaScript :
 • use JavaScript ES6 object syntax to model real-world items
 
 
-Learn Basic DOM :
+Learn Basic DOM events :
 
 • Register events to DOM elements using the addEventListener() method
 
